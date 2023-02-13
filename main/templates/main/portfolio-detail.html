@@ -1,0 +1,66 @@
+a{% extends 'main/base.html' %}
+{% load static %}
+
+<!-- ================================
+Start SEO blocks
+================================= -->
+{% block title %}{% endblock %}
+{% block decription %}{% endblock %}
+{% block keywords %}{% endblock %}
+<!-- ================================
+END SEO blocks
+================================= -->
+
+<!-- ================================
+Start CSS blocks
+================================= -->
+{% block extend_header %}{% endblock %}
+<!-- ================================
+END CSS blocks
+================================= -->
+
+<!-- ================================
+Start script blocks
+================================= -->
+{% block extend_footer %}{% endblock %}
+<!-- ================================
+END script blocks
+================================= -->
+
+<!-- ================================
+Start Content
+================================= -->
+{% block content %}
+<section>
+  <div class="innerPageBannerCol">
+    {% comment %} <div class="container">
+      <div class="row g-4 g-md-3  align-items-center">
+        <div class="col-md-6">
+          <div class="bannerContent">
+            <h1 class="xlTitle pb-md-3">{{object.name}}</h1>
+          </div>
+        </div>
+      </div>
+    </div> {% endcomment %}
+    <div class="sectionSpaceSm">
+      <div class="container">
+        <h1 class="xlTitle pb-md-3">{{object.name}}</h1>
+        <h1 > {{object.body|safe}}</h1>
+        <br>
+       <a href="{{object.link}}">
+        <img class="" src="{{object.image.url}}"/>
+      </a>
+       
+      </div> 
+    </div>
+  </div>
+</section>
+
+<section>
+  
+</section>
+<!-- ================================
+End Content
+================================= -->
+{%endblock%}
+    
