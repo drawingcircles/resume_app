@@ -92,7 +92,7 @@ class Portfolio(models.Model):
     class Meta:
         verbose_name_plural = 'Portfolio Profiles'
         verbose_name = 'Portfolio'
-        ordering = ["date"]
+        ordering = ["-date"]
     link = models.CharField(max_length=100, null=False, blank=True, default='devsearch111.herokuapp.com')
     date = models.DateTimeField(blank=True, null=True)
     name = models.CharField(max_length=200, blank=True, null=True)
