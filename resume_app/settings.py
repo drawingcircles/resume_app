@@ -28,8 +28,12 @@ SECRET_KEY = 'django-insecure-v8bzoj5)*&_%x-yy7o*z-2$*m1uuo*hbtb(n)%@bboej@%wkox
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
-ALLOWED_HOSTS = ['localhost','127.0.0.1', 'resumeapp-production.up.railway.app', 'jcbmlnr.com']
 
+<<<<<<< HEAD
+ALLOWED_HOSTS = ['localhost', 'jacobmolinar.herokuapp.com','127.0.0.1']
+=======
+ALLOWED_HOSTS = ['localhost','127.0.0.1', 'resumeapp-production.up.railway.app', 'jcbmlnr.com']
+>>>>>>> refs/remotes/origin/main
 
 
 # Application definition
@@ -49,9 +53,12 @@ INSTALLED_APPS = [
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
+<<<<<<< HEAD
 
     'whitenoise.middleware.WhiteNoiseMiddleware',
 
+=======
+>>>>>>> refs/remotes/origin/main
     'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
     'django.contrib.auth.middleware.AuthenticationMiddleware',
@@ -175,7 +182,9 @@ AWS_STATIC_LOCATION = 'static/'
 STATIC_URL = f'https://{AWS_S3_CUSTOM_DOMAIN}/{AWS_STATIC_LOCATION}/'
 STATICFILES_STORAGE = 'storages.backends.s3boto3.S3StaticStorage'
 
+<<<<<<< HEAD
 AWS_STORAGE_BUCKET_NAME = os.environ.get('AWS_STORAGE_BUCKET_NAME')
+=======
 AWS_PUBLIC_MEDIA_LOCATION = 'media/'
 MEDIA_URL = f'https://{AWS_S3_CUSTOM_DOMAIN}/{AWS_PUBLIC_MEDIA_LOCATION}/'
 DEFAULT_FILE_STORAGE = 'storages.backends.s3boto3.S3Boto3Storage'
@@ -192,3 +201,4 @@ SECURE_SSL_REDIRECT = True
 
 if os.getcwd() == '/app':
     DEBUG = False
+>>>>>>> refs/remotes/origin/main
